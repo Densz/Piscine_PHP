@@ -1,0 +1,24 @@
+<HTML>
+
+	<HEAD>
+		<TITLE>Ceci est le titre de ma page</TITLE>
+		<STYLE>
+			H1 {COLOR: red;}
+			#monimage {border: 5px solid red;}
+			.maclass {color: green;}
+		</STYLE>
+	</HEAD>
+
+	<BODY>
+		HOP <BR />
+		<H1>Chouette</H1> <BR />
+		<H1> re Hop </H1> <BR />
+
+		<IMG ID="monimage" SRC="img_42.png"> <BR />
+
+		<A HREF="http://www.google.com" CLASS="maclass">Ceci est un lien</A><BR	/>
+
+		<IMG SRC="img_42.png"> <BR />
+	</BODY>
+
+</HTML>
