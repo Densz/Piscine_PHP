@@ -1,0 +1,94 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   doft.css                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dzheng <dzheng@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/03/01 15:55:57 by dzheng            #+#    #+#             */
+/*   Updated: 2017/03/01 19:28:41 by dzheng           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+body
+{
+	background-color: #4F4F4F;
+}
+
+#container
+{
+	width: 1400px;
+	margin: auto;
+}
+
+#container_2
+{
+	width: 1400px;
+	margin: auto;
+	text-align: center;
+}
+
+#header
+{
+	width: 1400px;
+	height: 120px;
+	background-color: #8F8F8F;
+	border-radius: .5em;
+	box-shadow: .5em .5em .5em black;
+	margin-top: 1em;
+}
+
+#day_of_the_42
+{
+	height: 6em;
+	margin: 10px;
+}
+
+#left
+{
+	width: 140px;
+	height: 440px;
+	background-color: #8F8F8F;
+	border-radius: .5em;
+	box-shadow: .5em .5em .5em black;
+	display: inline-block;/*Chercher le doc pour display*/
+	margin-right: 20px;
+	margin-bottom: 110px;
+}
+
+#center
+{
+	width: 1000px;
+	height: 550px;
+	background-color: #8F8F8F;
+	border-radius: .5em;
+	margin: auto;
+	box-shadow: .5em .5em .5em black;
+	display: inline-block;
+	margin-top: 20px;
+}
+
+#right
+{
+	width: 132px;
+	height: 480px;
+	background-color: #8F8F8F;
+	border-radius: .5em;
+	margin: auto;
+	box-shadow: .5em .5em .5em black;
+	display: inline-block;
+	margin-left: 20px;
+	margin-bottom: 70px;
+}
+
+#green_box
+{
+	width: 500px;
+	height: 150px;
+	background-color: #89FE89;
+	border-radius: .5em;
+	margin: auto;
+	box-shadow: .5em .5em .5em black;
+	position: absolute;
+	margin-left: 450px; 
+}
