@@ -5,8 +5,9 @@
      By: dzheng <dzheng@student.42.fr>              +#+  +:+       +#+
                                                   +#+#+#+#+#+   +#+
      Created: 2017/03/01 15:55:30 by dzheng            #+#    #+#
-     Updated: 2017/03/01 19:28:10 by dzheng           ###   ########.fr
+     Updated: 2017/03/03 19:35:14 by dzheng           ###   ########.fr
 -->
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -18,13 +19,39 @@
 		<div id="container">
 			<div id="header">
 				<img id="day_of_the_42" src="resources/day_of_the_42.png">
+				<img id="loupe" src="resources/loupe.png">
+				<div id="close-reload">
+					<img id="reload" src="resources/reload.png">
+					<img id="close" src="resources/close.gif">
+				</div>
 			</div>
 		</div>
 		<div id="container_2">
-			<div id="left"></div>
-			<div id="center"></div>
-			<div id="right"></div>
+			<div id="left">
+				<img class="left_item" id="first_item" src="resources/arrow.png">
+				<img class="left_item" src="resources/main.png">
+				<img class="left_item" id="oeil" src="resources/oeil.png">
+				<img class="left_item" src="resources/outil.png">
+				<img class="left_item" src="resources/chat-icon.png">
+			</div>
+			<div id="center">
+				<img id="cluster" src="resources/cluster.jpg">
+			</div>
+			<div id="right">
+				<img class="left_item" id="first_item" src="resources/book.png">
+				<img class="left_item" src="resources/towel.png">
+				<div id="img_brick"></div>
+			</div>
+			<div id="green_box">
+				<div style="margin-left: 20px;">
+					<span>Vous <span id="big_text">entrez</span> alors dans une grande piece remplie <br/>d'<span id="shadow">ordinateurs...</span><br/>
+					<span style="font-style: italic">- Bonjour, vous êtes nouveau ici?</span></span>
+					<form method="post">
+						<input type="text" style="width: 35em; border-width:3px; border-style: inset;">
+						<input type="submit" value="Repondre">
+					</form>
+				</div>
+			</div>
 		</div>
-		<div id="green_box"></div>
 	</body>
 </html>
