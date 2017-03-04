@@ -1,0 +1,56 @@
+#!/usr/bin/php
+
+<?php
+	function my_add($p1, $p2)
+	{
+		return $p1 + $p2;
+	}
+
+	echo "Hello\n";
+	print("Hello print\n");
+
+	$my_var = 42;
+	$my_str = "World";
+	$my_tab = array("zero", "un", "deux");
+	$my_hash = array("key1" => "val1", "key2" => "val2");
+
+	echo $my_var."\n".".$my_str"."\n";
+
+	$result = "21" + "21";
+	echo "Result = $result\n";
+
+	echo $my_tab[0]."\n";
+	echo $my_hash["key1"]."\n";
+
+	echo "$my_tab\n\n";
+	print_r($my_tab);
+
+	echo my_add("36", "6");
+	if ($my_tab[1] == "un")
+	{
+		echo "OK\n";
+	}
+	else
+	{
+		echo "KO\n";
+	}
+
+	echo "$argc\n";
+	print_r($argv);
+
+	foreach ($my_tab as $elem) 
+	{
+		echo "$elem\n";
+	}
+
+	$my_tab = explode(";", "zero;un;deux");
+?>
+
+Hello html
+
+
+chmod 755 prog.php
+
+./prog.php pour l'executer sur le terminal
+
+www.php.net

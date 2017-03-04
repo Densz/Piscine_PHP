@@ -5,7 +5,7 @@
      By: dzheng <dzheng@student.42.fr>              +#+  +:+       +#+
                                                   +#+#+#+#+#+   +#+
      Created: 2017/03/01 15:55:30 by dzheng            #+#    #+#
-     Updated: 2017/03/03 19:35:14 by dzheng           ###   ########.fr
+     Updated: 2017/03/04 13:20:02 by dzheng           ###   ########.fr
 -->
 
 <!DOCTYPE html>
@@ -18,29 +18,35 @@
 	<body>
 		<div id="container">
 			<div id="header">
-				<img id="day_of_the_42" src="resources/day_of_the_42.png">
-				<img id="loupe" src="resources/loupe.png">
+				<img id="day_of_the_42" title="Day of the 42" alt="Day of the 42" src="resources/day_of_the_42.png">
+				<img id="loupe" title="loupe" alt="loupe" src="resources/loupe.png">
 				<div id="close-reload">
-					<img id="reload" src="resources/reload.png">
-					<img id="close" src="resources/close.gif">
+					<a href="http://www.disney.com" title="Recommencer au début">
+						<img id="reload" title="Recommencer au début" src="resources/reload.png">
+					</a>
+					<a href="http://www.relaischateaux.com" title="Déconnecter">
+						<img id="close" title="Déconnecter" src="resources/close.gif">
+					</a>
 				</div>
 			</div>
 		</div>
 		<div id="container_2">
 			<div id="left">
-				<img class="left_item" id="first_item" src="resources/arrow.png">
-				<img class="left_item" src="resources/main.png">
-				<img class="left_item" id="oeil" src="resources/oeil.png">
-				<img class="left_item" src="resources/outil.png">
-				<img class="left_item" src="resources/chat-icon.png">
+				<img class="left_item" title="Avancer" alt="Avancer" id="first_item" src="resources/arrow.png">
+				<img class="left_item" title="Prendre" alt="Prendre" src="resources/main.png">
+				<img class="left_item" title="Regarder" alt="Regarder" id="oeil" src="resources/oeil.png">
+				<img class="left_item" title="Utiliser" alt="Utiliser" src="resources/outil.png">
+				<img class="left_item" title="Parler" alt="Parler" src="resources/chat-icon.png">
 			</div>
 			<div id="center">
 				<img id="cluster" src="resources/cluster.jpg">
+				<a href="http://www.ikea.com"><div id="Ikea"></div></a>
+				<a href="http://www.apple.com"><div id="Apple"></div></a>
 			</div>
 			<div id="right">
-				<img class="left_item" id="first_item" src="resources/book.png">
-				<img class="left_item" src="resources/towel.png">
-				<div id="img_brick"></div>
+				<img id="book" title="Livre" alt="Livre" src="resources/book.png">
+				<img id="towel" title="Serviette" alt="Serviette" src="resources/towel.png">
+				<div id="img_brick" title="Bricks" alt="Bricks"></div>
 			</div>
 			<div id="green_box">
 				<div style="margin-left: 20px;">
@@ -48,7 +54,7 @@
 					<span style="font-style: italic">- Bonjour, vous êtes nouveau ici?</span></span>
 					<form method="post">
 						<input type="text" style="width: 35em; border-width:3px; border-style: inset;">
-						<input type="submit" value="Repondre">
+						<input type="submit" value="Repondre" id="button">
 					</form>
 				</div>
 			</div>

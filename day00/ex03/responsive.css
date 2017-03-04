@@ -1,0 +1,153 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   responsive.css                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dzheng <dzheng@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/03/04 13:27:21 by dzheng            #+#    #+#             */
+/*   Updated: 2017/03/04 13:42:09 by dzheng           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+.susu
+{
+	border: 1px solid black;
+	min-width: 100px;
+	height: 100px;
+}
+.weight
+{
+	text-align: right;
+}
+.no
+{
+	text-align: left;
+}
+.symb
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 20;
+}
+table
+{
+	border-collapse: collapse;
+}
+.nothing
+{
+	border: 0px solid white;
+}
+
+p, th
+{
+	font-size: 16;
+}
+
+@media only screen and (max-width: 1850px)
+{
+	.susu
+	{
+		border: 1px solid black;
+		min-width: 80px;
+		height: 80px;
+	}
+	.weight
+	{
+		text-align: right;
+	}
+	.no
+	{
+		text-align: left;
+	}
+	.symb
+	{
+		text-align: center;
+		font-weight: bold;
+		font-size: 16;
+	}
+	table
+	{
+		border-collapse: collapse;
+	}
+	.nothing
+	{
+		border: 0px solid white;
+	}
+	p, th
+	{
+		font-size: 12;
+	}
+}
+
+@media only screen and (max-width: 1440px)
+{
+	.susu
+	{
+		border: 1px solid black;
+		min-width: 70px;
+		height: 70px;
+	}
+	.weight
+	{
+		text-align: right;
+	}
+	.no
+	{
+		text-align: left;
+	}
+	.symb
+	{
+		text-align: center;
+		font-weight: bold;
+		font-size: 14;
+	}
+	table
+	{
+		border-collapse: collapse;
+	}
+	.nothing
+	{
+		border: 0px solid white;
+	}
+	p, th
+	{
+		font-size: 10;
+	}
+}
+
+@media only screen and (max-width: 1260px)
+{
+	.susu
+	{
+		border: 1px solid black;
+		min-width: 60px;
+		height: 60px;
+	}
+	.weight
+	{
+		text-align: right;
+	}
+	.no
+	{
+		text-align: left;
+	}
+	.symb
+	{
+		text-align: center;
+		font-weight: bold;
+		font-size: 12;
+	}
+	table
+	{
+		border-collapse: collapse;
+	}
+	.nothing
+	{
+		border: 0px solid white;
+	}
+	p, th
+	{
+		font-size: 8;
+	}
+}
