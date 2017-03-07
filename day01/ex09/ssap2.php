@@ -3,34 +3,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   oddeven.php                                        :+:      :+:    :+:   */
+/*   ssap.php                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dzheng <dzheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/04 16:43:03 by dzheng            #+#    #+#             */
-/*   Updated: 2017/03/04 16:43:05 by dzheng           ###   ########.fr       */
+/*   Created: 2017/03/07 18:03:19 by dzheng            #+#    #+#             */
+/*   Updated: 2017/03/07 18:03:23 by dzheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-while (42)
+if ($argc <= 1)
+	return (FALSE);
+else
 {
-	echo "Entrez un nombre: ";
-	$stdin = new SplFileObject('php://stdin');
-	$number = $stdin->current();
-	$number = rtrim($number, "\n");
-	if (is_numeric($number))
+	unset($argv[0]);
+	$str = implode(" ", $argv);
+	$tab = explode(" ", $str);
+	foreach ($tab as $elem)
 	{
-		if ($number % 2 == 0)
-			echo "Le chiffre $number est Pair\n";
-		else
-			echo "Le chiffre $number est Impair\n";
-	}
-	else
-		echo "'$number' n'est pas un chiffre\n";
-	if ($number == "^D") // A REVOIR
-	{
-		echo "\n";
-		exit (0);
+		if()
 	}
 }
+
 ?>

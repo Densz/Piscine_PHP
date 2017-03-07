@@ -3,34 +3,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   oddeven.php                                        :+:      :+:    :+:   */
+/*   ssap.php                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dzheng <dzheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/04 16:43:03 by dzheng            #+#    #+#             */
-/*   Updated: 2017/03/04 16:43:05 by dzheng           ###   ########.fr       */
+/*   Created: 2017/03/07 15:56:50 by dzheng            #+#    #+#             */
+/*   Updated: 2017/03/07 15:56:53 by dzheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-while (42)
+if ($argc <= 1)
+	return (FALSE);
+else
 {
-	echo "Entrez un nombre: ";
-	$stdin = new SplFileObject('php://stdin');
-	$number = $stdin->current();
-	$number = rtrim($number, "\n");
-	if (is_numeric($number))
-	{
-		if ($number % 2 == 0)
-			echo "Le chiffre $number est Pair\n";
-		else
-			echo "Le chiffre $number est Impair\n";
-	}
-	else
-		echo "'$number' n'est pas un chiffre\n";
-	if ($number == "^D") // A REVOIR
-	{
-		echo "\n";
-		exit (0);
-	}
+	unset($argv[0]);
+	$string_implode = implode(" ", $argv);
+	$string = trim(preg_replace('/\s\s+/', ' ', $string_implode));
+	$my_tab = explode(" ", $string);
+	sort($my_tab);
+	foreach ($my_tab as $elem)
+		echo "$elem\n";
 }
 ?>

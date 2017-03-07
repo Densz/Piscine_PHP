@@ -3,34 +3,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   oddeven.php                                        :+:      :+:    :+:   */
+/*   ft_is_sort.php                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dzheng <dzheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/04 16:43:03 by dzheng            #+#    #+#             */
-/*   Updated: 2017/03/04 16:43:05 by dzheng           ###   ########.fr       */
+/*   Created: 2017/03/07 17:11:23 by dzheng            #+#    #+#             */
+/*   Updated: 2017/03/07 17:11:27 by dzheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-while (42)
+function	ft_is_sort($tab) 
 {
-	echo "Entrez un nombre: ";
-	$stdin = new SplFileObject('php://stdin');
-	$number = $stdin->current();
-	$number = rtrim($number, "\n");
-	if (is_numeric($number))
+	$prev = array_shift($tab);
+	foreach ($tab as $value)
 	{
-		if ($number % 2 == 0)
-			echo "Le chiffre $number est Pair\n";
-		else
-			echo "Le chiffre $number est Impair\n";
+		if (strcmp($prev, $value) > 0)
+			return (FALSE);
+		$prev = $value;
 	}
-	else
-		echo "'$number' n'est pas un chiffre\n";
-	if ($number == "^D") // A REVOIR
-	{
-		echo "\n";
-		exit (0);
-	}
+	return (TRUE);
 }
 ?>

@@ -3,34 +3,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   oddeven.php                                        :+:      :+:    :+:   */
+/*   rostring.php                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dzheng <dzheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/04 16:43:03 by dzheng            #+#    #+#             */
-/*   Updated: 2017/03/04 16:43:05 by dzheng           ###   ########.fr       */
+/*   Created: 2017/03/07 16:25:13 by dzheng            #+#    #+#             */
+/*   Updated: 2017/03/07 16:35:34 by dzheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-while (42)
+function epur_str($string)
 {
-	echo "Entrez un nombre: ";
-	$stdin = new SplFileObject('php://stdin');
-	$number = $stdin->current();
-	$number = rtrim($number, "\n");
-	if (is_numeric($number))
-	{
-		if ($number % 2 == 0)
-			echo "Le chiffre $number est Pair\n";
-		else
-			echo "Le chiffre $number est Impair\n";
-	}
+	$epur_str = trim(preg_replace('/\s\s+/', ' ', $string));
+	return ($epur_str);
+}
+
+if ($argc <= 1)
+	return (FALSE);
+else
+{
+	$string = epur_str($argv[1]);
+	$tab = explode(" ", $string);
+	if (count($tab) == 1)
+		echo "$tab[0]";
 	else
-		echo "'$number' n'est pas un chiffre\n";
-	if ($number == "^D") // A REVOIR
 	{
-		echo "\n";
-		exit (0);
+		$tmp_word = $tab[0];
+		unset($tab[0]);
+		echo (implode(" ", $tab));
+		echo " ";
+		echo "$tmp_word";
 	}
 }
+
+//\n a la fin ou pas ????
+
+
+
 ?>
