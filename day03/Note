@@ -1,0 +1,8 @@
+Dossier http creer sans la home
+
+cd http/mywebsite
+
+emacs index.php
+<?php
+	CouCou
+?>

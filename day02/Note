@@ -1,0 +1,105 @@
+#!/usr/bin/php
+--- Regex ---
+grep toto data.csv --> je cherche toto dans le csv
+man preg_match
+
+<?php
+	$nb = preg_match("/toto/", "dwqptotodijtotoqd")	;
+	/^toto$/ ==> s'attend a ce que toto soit en debut de chaine
+	/t[oi]t[oi]/ ==> recherche de toto ou titi
+	/t[0-9]t[a-m]/ ==> char entre 0 et 9
+	/t[0-9]+t[a-m]/ ==> + indique que le caractere precedent va etre repeter
+	/t[0-9]*t[a-m]/ ==> * peut etre present une fois ou jamais
+	/t[0-9]?t[a-m]/ ==> soit 0 soit 1
+	/t[0-9]{4}t[a-m]/ ==> caractere precedent repete 4 fois
+	/t[^0-9]{4}t[a-m]/ ==> ^ tout sauf ces caractere
+	/t([io])t\1/ ==> en fonction du premier caractere trouve ?? marche a moitie // lire le man pour trouver
+	echo "$nb\n"; ==> result = 1
+?>
+
+--- VAR ---
+<?php
+
+	$nom = "key";
+	$$nom = "val";
+	echo "$key\n";
+
+	==> equivalent create une variable Key = Val
+
+?>
+
+--- Files ---
+function = fgets / fopen / file / fgetcsv
+
+<?php
+	$tab = file("data.csv"); //File mets un saut de ligne automatique
+	foreach ($tab as $elem)
+	{
+		echo "$elem";
+	}
+
+	$fd = fopen("data.csv", "r");
+	while ($line = fgets($fd))
+	{
+		echo "$line";
+	}
+	fclose($fd);
+
+	$fd = fopen("data.csv", "r");
+	while ($line = fgetcsv($fd, 0, ";"))
+	{
+		print_r ($line);
+	}
+	fclose($fd);
+?>
+
+--- Eval --- ==> plutot dangereux a connaitre
+<?php
+	eval("echo 'Hello World';");
+
+	$my_var = fgets(STDIN);
+	eval($my_var);
+?>
+
+--- === --- ==> verification suppl de type
+Pratique avec Array_Search
+
+<?php
+
+	if ("Hello" == "World")
+		echo "OK\n";
+	else
+		echo "KO\n";
+
+	if (0 === "World")
+		echo "OK\n";
+	else
+		echo "KO\n";
+?>
+
+<?php
+	$my_tab = array("zero", "un", "deux");
+
+	if (array_search("zero", $my_tab) !== FALSE) ==> array_search peut renvoyer 0 qui correspond a la premiere cell du tableau mais ca ne veut pas pour autant dire que ca renvoie false
+		echo "Found\n"
+?>
+
+--- Curl ---
+<?php
+
+	$c = curl_init("http://www.42.fr");
+
+	$str = curl_exec($c);
+	echo "$str";
+?>
+
+
+
+
+
+
+
+
+
+
+
