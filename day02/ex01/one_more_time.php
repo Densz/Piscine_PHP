@@ -25,8 +25,10 @@ else
 		if (array_search(strtolower($content[1]), $jours) !== FALSE &&
 			$content[2] <= 31 && array_search(strtolower($content[3]), $mois) !== FALSE &&
 			$content[4] >= 1970 && $content[5] <= 23 && $content[6] <= 59 && $content[7] <= 59)
+		{
 			if ($time = mktime($content[5], $content[6], $content[7], array_search(strtolower($content[3]), $mois) + 1, $content[2], $content[4]))
 				echo ($time);
+		}
 		else
 			echo "Wrong format\n";
 	}

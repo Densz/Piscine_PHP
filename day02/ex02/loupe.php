@@ -20,7 +20,7 @@
 		{
 			$str = str_replace($test[1], strtoupper($test[1]), $str);
 		}
-		if (preg_match("/<a [^>]*>([^<]*).*<\/a>/", $str, $test) !== FALSE)
+		if (preg_match("/<a .+?>([a-zA-Z ]+)/", $str, $test) !== FALSE)
 		{
 			$str = str_replace($test[1], strtoupper($test[1]), $str);
 		}

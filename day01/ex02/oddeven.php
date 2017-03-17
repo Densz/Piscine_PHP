@@ -1,36 +1,25 @@
 #!/usr/bin/php
 <?php
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   oddeven.php                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dzheng <dzheng@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/04 16:43:03 by dzheng            #+#    #+#             */
-/*   Updated: 2017/03/04 16:43:05 by dzheng           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-while (42)
+while(1)
 {
-	echo "Entrez un nombre: ";
-	$stdin = new SplFileObject('php://stdin');
-	$number = $stdin->current();
-	$number = rtrim($number, "\n");
-	if (is_numeric($number))
-	{
-		if ($number % 2 == 0)
-			echo "Le chiffre $number est Pair\n";
+	echo "Entrer un nombre: ";
+	if ($input = fgets(STDIN))
+	{	
+		$input = rtrim($input);
+		if (is_numeric($input))
+		{
+			if ($input % 2 == 0)
+				echo "Le chiffre $input est Pair\n";
+			else
+				echo "Le chiffre $input est Impair\n";
+		}
 		else
-			echo "Le chiffre $number est Impair\n";
+			echo "'$input' n'est pas un chiffre\n";
 	}
 	else
-		echo "'$number' n'est pas un chiffre\n";
-	if ($number == "^D") // A REVOIR
 	{
 		echo "\n";
-		exit (0);
+		return;
 	}
 }
 ?>

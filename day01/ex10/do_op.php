@@ -14,7 +14,7 @@
 
 function epur_str($string)
 {
-	$epur_str = trim(preg_replace('/\s\s+/', ' ', $string));
+	$epur_str = trim(preg_replace('/[\s\t]+/', ' ', $string));
 	return ($epur_str);
 }
 

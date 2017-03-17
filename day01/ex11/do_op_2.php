@@ -1,49 +1,33 @@
 #!/usr/bin/php
 <?php
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   do_op_2.php                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dzheng <dzheng@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/09 12:55:08 by dzheng            #+#    #+#             */
-/*   Updated: 2017/03/09 13:03:09 by dzheng           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-function epur_str($string)
+if ($argc != 2)
 {
-	$epur_str = trim(preg_replace('/\s\s+/', ' ', $string));
-	return ($epur_str);
+	echo "Incorrect Parameters\n";
+	return (false);
 }
-
-if ($argc <= 1)
-	echo "Incorrect Parameters";
-else
+$calcul = preg_replace('/[*]/', " * ", $argv[1]);
+$calcul = preg_replace('/[-]/', " - ", $calcul);
+$calcul = preg_replace('/[+]/', " + ", $calcul);
+$calcul = preg_replace('/[\/]/', " / ", $calcul);
+$calcul = preg_replace('/[%]/', " % ", $calcul);
+$calcul = trim(preg_replace('/\s+/', ' ', $calcul));
+$tab = explode(" ", $calcul);
+if ((!is_numeric($tab[0]) || !is_numeric($tab[2])) && !preg_match('/[\/+-*%]/', $tab[1]))
 {
-	unset($argv[0]);
-	$str = epur_str($argv[1]);
-	$tab = explode(" ", $str);
-	foreach ($tab as $elem)
-	{
-		if (is_numeric($elem) == FALSE && $elem != "+" && $elem != "-" && $elem != "/" && $elem != "*" && $elem != "%")
-		{
-			echo "Syntax Error";
-			return (FALSE);
-		}
-	}
-	if ($tab[1] == "+")
-		$result = $tab[0] + $tab[2];
-	else if ($tab[1] == "-")
-		$result = $tab[0] - $tab[2];
-	else if ($tab[1] == "/")
-		$result = $tab[0] / $tab[2];
-	else if ($tab[1] == "*")
-		$result = $tab[0] * $tab[2];
-	else if ($tab[1] == "%")
-		$result = $tab[0] % $tab[2];
-	echo $result;
-	return (TRUE);
+	echo "Syntax Error\n";
+	return (false);
 }
-
+$operand_1 = trim($tab[0]);
+$operator = trim($tab[1]);
+$operand_2 = trim($tab[2]);
+if ($operator == "+")
+	echo $operand_1 + $operand_2;
+else if ($operator == "-")
+	echo $operand_1 - $operand_2;
+else if ($operator == "*")
+	echo $operand_1 * $operand_2;
+else if ($operator == "/")
+	echo $operand_1 / $operand_2;
+else if ($operator == "%")
+	echo $operand_1 % $operand_2;
 ?>
