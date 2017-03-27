@@ -1,0 +1,203 @@
+/*****************/
+/*	   GLOBAL	 */
+/*****************/
+body
+{
+	margin: 0;
+}
+a
+{
+	text-decoration: none;
+	color: black;
+}
+a:visited
+{
+	color: black;
+}
+h1
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+h3
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+span
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+}
+
+li
+{
+	margin-left: 15px;
+	margin-bottom: 20px;
+	float: left;
+	list-style: none;
+}
+/*****************/
+/*	 HOMEPAGE	 */
+/*****************/
+#header
+{
+	width: 1000px;
+	height: 120px;
+	margin: auto;
+	word-spacing: 0px;
+}
+#img_logo_header
+{
+	vertical-align: middle;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 150px;
+}
+#logo_header
+{
+	vertical-align: top;
+	display: inline-block;
+	width: 160px;
+	height: 70px;
+}
+#account
+{
+	width: 840px;
+	height: 70px;
+	margin-left: -5px;
+	display: inline-block;
+	text-align: right;
+}
+#sign_in
+{
+	vertical-align: top;
+	line-height: 70px;
+	margin-right: 10px;
+}
+#my_shopping_bag
+{
+	width: 30px;
+	margin-right: 5px;
+	margin-left: -5px;
+	margin-top: 17px;
+}
+#gender
+{
+	margin-top: 15px;
+	margin-left: 20px;
+}
+#gender_table
+{
+	border-spacing: 5px;
+}
+.categories
+{
+	background-color: #EEEEEE;
+	font-family: sans-serif;
+	border: 1.5px solid white;
+	border-radius: .3em;
+}
+#slider
+{
+	width: 1000px;
+	height: 570px;
+	background-color: green;
+	margin: 15px auto;
+}
+#img_slider
+{
+	width: 1000px;
+}
+
+/*****************/
+/*	 SIGN-IN/UP	 */
+/*****************/
+#container
+{
+	width: 1000px;
+	height: 390px;
+/*	background-color: blue;*/
+	margin: 10px auto;
+}
+
+#sign_up_page
+{
+	display: inline-block;
+	width: 495px;
+	height: 500px;
+/*	background-color: red;*/
+	vertical-align: top;
+}
+
+#sign_in_page
+{
+	display: inline-block;
+	width: 495px;
+	height: 500px;
+	margin-left: 6px;
+/*	background-color: grey;*/
+}
+
+.button {
+	font-size: 14px;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    line-height: 25px;
+    margin-top: 5px;
+}
+
+.button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.field
+{
+	border: 1px solid #555555;
+	width: 300px;
+	height: 20px;
+}
+
+#border_right
+{
+	border-right: 1px solid #555555;
+}
+
+#container_list
+{
+	width: 1000px;
+	height: 1000px;
+	margin: 10px auto;
+}
+
+/*****************/
+/*	   CART 	 */
+/*****************/
+
+#block_list
+{
+	width: 100%;
+	background-color: #CCCCCC;
+	min-height: 300px;
+}
+#shopping_list
+{
+	width: 100%;
+	background-color: white;
+	min-height: 230px;
+	margin-top: 35px;
+	float: left;
+}

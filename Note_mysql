@@ -1,0 +1,59 @@
+Pour se connecter au serveur :
+mysql -udzheng -p
+/*password*/
+
+show databases;
+use sql42;
+show tables; //Montrer toutes les tables
+
+select * from film; (film is the table)
+select * from genre;
+
+id = cle primaire;
+
+select nom(column),nom(column2) from genre;
+
+describe film; //avoir les titres des columns
+select id_film, titre from film limit 10; //montrer les 10 premiers du tableaux
+SELECT id_film, titre FROM film ORDER BY titre LIMIT 10;
+SELECT id_film, titre FROM film ORDER BY titre DESC LIMIT 10; //10 derniers
+
+SELECT id_film, titre, annee_prod FROM film WHERE annee_prod != 0 ORDER BY titre DESC LIMIT 10;
+SELECT id_film, titre, annee_prod FROM film WHERE annee_prod > 2005 and annee_prod < 2007 ORDER BY titre DESC LIMIT 10;
+
+SELECT count(*) FROM film WHERE annee_prod > 2005 and annee_prod < 2007 ORDER BY titre DESC;
+SELECT max(annee_prod)
+
+Jointure --> regroupe des donnees entre deux tables
+SELECT * FROM film INNER JOIN genre ON film.id_genre = genre.id_genre WHERE id_genre = 25;
+SELECT film FROM film INNER JOIN genre ON film.id_genre = genre.id_genre WHERE id_genre = 25;
+
+SELECT count(*), id_genre FROM film GROUP BY id_genre;
+
+
+//MODIFIER DE LA DATA
+DELETE FROM genre WHERE id_genre = 29;
+INSERT INTO genre (id_genre, nom) VALUES (29, "Test");
+SELECT * FROM genre;
+UPDATE genre SET nom = "test" WHERE id_genre = 29;
+
+//CREER UNE TABLE
+CREATE TABLE Test (nom VARCHAR(255), id INT PRIMARY KEY AUTO_INCREMENT);
+SELECT * FROM Test;
+INSERT INTO Test (nom) VALUES ("toto");
+
+
+
+/*
+** Integration dans le php
+*/
+
+mysql_connect("localhost:/....", "dzheng", $_ENV['PASS']) or die('Error : ' . mysql_error());
+mysql_select_db("sql42");
+$res = mysql_query("SELECT 1 FROM user WHERE nom = '" . $argv[1] . "' and pass = '" . $argv[2] . "';");
+$res = mysql_fetch_array($res);
+
+php secu.php dzheng /*password*/
+
+
+$res = mysql_query("SELECT 1 FROM user WHERE nom = '" . $argv[1] . "' and pass = '" . mysql_real_escape_string($argv[2]) . "';");
